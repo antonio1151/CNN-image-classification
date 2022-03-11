@@ -13,7 +13,7 @@ parameters={} #initialize parameters
 #data setup
 parameters['path_cats'] = 'PetImages/Cat'
 parameters['path_dogs'] = 'PetImages/Dog'
-parameters['size'] =60  #resize the images in r X r
+parameters['size'] =50  #resize the images in r X r
 parameters['rebuild'] = True #if this is the fist time running this model, it should be 'True' otherwise False
 
 #setting the convlution neural network
@@ -35,7 +35,7 @@ parameters['output_dimen_cnn'] = size_conv_output(parameters)
 #setting full connected NN
 parameters['# inputs'] = parameters['output_dimen_cnn']
 parameters['# outputs'] = 2
-parameters['# layers'] = 3
+parameters['# layers'] = 4
 parameters['# activations'] = parameters['# inputs']
 parameters['activation function'] = 'relu' # relu, sigmoid, or LeakyReLU (lrelu)
 
@@ -48,7 +48,7 @@ parameters['batch_size_validation']=100
 
 #training
 parameters['learning rate'] = 1.0e-3
-parameters['epochs'] = 5 #number of epochs
+parameters['epochs'] = 6 #number of epochs
 parameters['max training epochs'] = 1000
 
 #saving model
