@@ -152,7 +152,7 @@ class model():
             y = self.model(x.to('cuda'))
         else:
             y = self.model(x)
-    return y
+        return y
 
 #visualization loss functions
     def visual_loss(self):
