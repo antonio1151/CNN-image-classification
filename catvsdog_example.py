@@ -13,7 +13,7 @@ parameters={} #initialize parameters
 #data setup
 parameters['path_cats'] = 'PetImages/Cat'
 parameters['path_dogs'] = 'PetImages/Dog'
-parameters['size'] =50  #resize the images in r X r
+parameters['size'] =60  #resize the images in r X r
 parameters['rebuild'] = True #if this is the fist time running this model, it should be 'True' otherwise False
 
 #setting the convlution neural network
