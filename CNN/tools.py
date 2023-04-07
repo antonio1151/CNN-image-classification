@@ -71,11 +71,11 @@ class data_of_inmages():
         self.namedata=params['dataset']
         #extract the dataset
         print("downloading the dataset")
-        wget.download("https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_3367a.zip")
-        with ZipFile('kagglecatsanddogs_3367a.zip', 'r') as zipObj:
+        wget.download("https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_5340.zip")
+        with ZipFile('kagglecatsanddogs_5340.zip', 'r') as zipObj:
            # Extract all the contents of zip file in current directory
            zipObj.extractall()
-        os.remove("kagglecatsanddogs_3367a.zip")
+        os.remove("kagglecatsanddogs_5340.zip")
     #creates hot vector for the prediction
         self.labels = {self.path_cats:0, self.path_dogs:1}
     #counter and list for the data
@@ -102,7 +102,7 @@ class data_of_inmages():
 
                     except Exception as e:
                         pass
-
+        self.data = np.asanyarray(self.data,dtype=object)
         np.random.shuffle(self.data)
         np.save(self.namedata, self.data)
         print('# of sample of cats=',self.catscount)
